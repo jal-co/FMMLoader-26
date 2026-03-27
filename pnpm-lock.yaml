@@ -87,8 +87,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       yaml:
-        specifier: ^2.8.1
-        version: 2.8.1
+        specifier: ^2.8.3
+        version: 2.8.3
     devDependencies:
       '@eslint/js':
         specifier: ^9.39.1
@@ -113,10 +113,10 @@ importers:
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.3.1
-        version: 4.7.0(vite@7.2.4(jiti@1.21.7)(yaml@2.8.1))
+        version: 4.7.0(vite@7.2.4(jiti@1.21.7)(yaml@2.8.3))
       '@vitest/coverage-v8':
         specifier: ^4.0.13
-        version: 4.0.14(vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.1))
+        version: 4.0.14(vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.3))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.22(postcss@8.5.6)
@@ -152,7 +152,7 @@ importers:
         version: 3.7.1
       tailwindcss:
         specifier: ^3.4.14
-        version: 3.4.18(yaml@2.8.1)
+        version: 3.4.18(yaml@2.8.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -164,10 +164,10 @@ importers:
         version: 1.3.2(typescript@5.9.3)
       vite:
         specifier: ^7.2.2
-        version: 7.2.4(jiti@1.21.7)(yaml@2.8.1)
+        version: 7.2.4(jiti@1.21.7)(yaml@2.8.3)
       vitest:
         specifier: ^4.0.10
-        version: 4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.1)
+        version: 4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.3)
 
 packages:
 
@@ -183,6 +183,10 @@ packages:
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/code-frame@7.29.0':
+    resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/compat-data@7.28.5':
@@ -254,6 +258,10 @@ packages:
 
   '@babel/runtime@7.28.4':
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.29.2':
+    resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -2644,6 +2652,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -2693,8 +2702,8 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yaml@2.8.1:
-    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
+  yaml@2.8.3:
+    resolution: {integrity: sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==}
     engines: {node: '>= 14.6'}
     hasBin: true
 
@@ -2726,6 +2735,12 @@ snapshots:
       lru-cache: 10.4.3
 
   '@babel/code-frame@7.27.1':
+    dependencies:
+      '@babel/helper-validator-identifier': 7.28.5
+      js-tokens: 4.0.0
+      picocolors: 1.1.1
+
+  '@babel/code-frame@7.29.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
@@ -2815,6 +2830,8 @@ snapshots:
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/runtime@7.28.4': {}
+
+  '@babel/runtime@7.29.2': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -3563,8 +3580,8 @@ snapshots:
 
   '@testing-library/dom@10.4.1':
     dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/runtime': 7.28.4
+      '@babel/code-frame': 7.29.0
+      '@babel/runtime': 7.29.2
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       dom-accessibility-api: 0.5.16
@@ -3732,7 +3749,7 @@ snapshots:
       '@typescript-eslint/types': 8.48.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@4.7.0(vite@7.2.4(jiti@1.21.7)(yaml@2.8.1))':
+  '@vitejs/plugin-react@4.7.0(vite@7.2.4(jiti@1.21.7)(yaml@2.8.3))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5)
@@ -3740,11 +3757,11 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.1)
+      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@4.0.14(vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.1))':
+  '@vitest/coverage-v8@4.0.14(vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.3))':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
       '@vitest/utils': 4.0.14
@@ -3757,7 +3774,7 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.1)
+      vitest: 4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -3770,13 +3787,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.14(vite@7.2.4(jiti@1.21.7)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.14(vite@7.2.4(jiti@1.21.7)(yaml@2.8.3))':
     dependencies:
       '@vitest/spy': 4.0.14
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.1)
+      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.3)
 
   '@vitest/pretty-format@4.0.14':
     dependencies:
@@ -4462,7 +4479,7 @@ snapshots:
       nano-spawn: 2.0.0
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.8.1
+      yaml: 2.8.3
 
   listr2@9.0.5:
     dependencies:
@@ -4642,13 +4659,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.5.6
 
-  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.1):
+  postcss-load-config@6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.3):
     dependencies:
       lilconfig: 3.1.3
     optionalDependencies:
       jiti: 1.21.7
       postcss: 8.5.6
-      yaml: 2.8.1
+      yaml: 2.8.3
 
   postcss-nested@6.2.0(postcss@8.5.6):
     dependencies:
@@ -4884,7 +4901,7 @@ snapshots:
 
   tailwind-merge@3.4.0: {}
 
-  tailwindcss@3.4.18(yaml@2.8.1):
+  tailwindcss@3.4.18(yaml@2.8.3):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -4903,7 +4920,7 @@ snapshots:
       postcss: 8.5.6
       postcss-import: 15.1.0(postcss@8.5.6)
       postcss-js: 4.1.0(postcss@8.5.6)
-      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.1)
+      postcss-load-config: 6.0.1(jiti@1.21.7)(postcss@8.5.6)(yaml@2.8.3)
       postcss-nested: 6.2.0(postcss@8.5.6)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.11
@@ -5017,7 +5034,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vite@7.2.4(jiti@1.21.7)(yaml@2.8.1):
+  vite@7.2.4(jiti@1.21.7)(yaml@2.8.3):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5028,12 +5045,12 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       jiti: 1.21.7
-      yaml: 2.8.1
+      yaml: 2.8.3
 
-  vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.1):
+  vitest@4.0.14(jiti@1.21.7)(jsdom@24.1.3)(yaml@2.8.3):
     dependencies:
       '@vitest/expect': 4.0.14
-      '@vitest/mocker': 4.0.14(vite@7.2.4(jiti@1.21.7)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.14(vite@7.2.4(jiti@1.21.7)(yaml@2.8.3))
       '@vitest/pretty-format': 4.0.14
       '@vitest/runner': 4.0.14
       '@vitest/snapshot': 4.0.14
@@ -5050,7 +5067,7 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.1)
+      vite: 7.2.4(jiti@1.21.7)(yaml@2.8.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       jsdom: 24.1.3
@@ -5109,7 +5126,7 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yaml@2.8.1: {}
+  yaml@2.8.3: {}
 
   yocto-queue@0.1.0: {}
 
